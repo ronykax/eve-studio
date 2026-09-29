@@ -6,6 +6,6 @@ import shadcn from "ultracite/oxlint/shadcn";
 
 export default defineConfig({
   extends: [core, react, shadcn, antiSlop],
-  ignorePatterns: core.ignorePatterns,
+  ignorePatterns: [...(core.ignorePatterns ?? []), "src/components/ui"],
   jsPlugins: shadcn.jsPlugins,
 });
